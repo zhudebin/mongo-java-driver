@@ -39,7 +39,6 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -73,7 +72,7 @@ public class DocumentCodecTest {
         doc.put("string", "hello");
         doc.put("double", 3.2);
         doc.put("binary", new Binary(BsonBinarySubType.USER_DEFINED, new byte[]{0, 1, 2, 3}));
-        doc.put("date", new Date(1000));
+        doc.put("date", new java.sql.Date(1000));
         doc.put("boolean", true);
         doc.put("code", new Code("var i = 0"));
         doc.put("minkey", new MinKey());

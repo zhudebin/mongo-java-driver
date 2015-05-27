@@ -70,7 +70,9 @@ public class ValueCodecProvider implements CodecProvider {
     private void addCodecs() {
         addCodec(new BinaryCodec());
         addCodec(new BooleanCodec());
+        addCodec(new SqlDateCodec());
         addCodec(new DateCodec());
+        addCodec(new TimestampCodec());
         addCodec(new DoubleCodec());
         addCodec(new IntegerCodec());
         addCodec(new LongCodec());

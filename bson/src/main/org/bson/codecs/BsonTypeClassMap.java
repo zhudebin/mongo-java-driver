@@ -18,20 +18,19 @@ package org.bson.codecs;
 
 import org.bson.BsonDbPointer;
 import org.bson.BsonRegularExpression;
-import org.bson.BsonTimestamp;
 import org.bson.BsonType;
-import org.bson.BsonUndefined;
 import org.bson.Document;
 import org.bson.types.Binary;
-import org.bson.types.Code;
-import org.bson.types.CodeWithScope;
 import org.bson.types.MaxKey;
 import org.bson.types.MinKey;
+import org.bson.types.Code;
 import org.bson.types.ObjectId;
 import org.bson.types.Symbol;
+import org.bson.types.CodeWithScope;
+import org.bson.BsonUndefined;
+import org.bson.BsonTimestamp;
 
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -102,7 +101,8 @@ public class BsonTypeClassMap {
         map.put(BsonType.ARRAY, List.class);
         map.put(BsonType.BINARY, Binary.class);
         map.put(BsonType.BOOLEAN, Boolean.class);
-        map.put(BsonType.DATE_TIME, Date.class);
+//        map.put(BsonType.DATE_TIME, Date.class);
+        map.put(BsonType.DATE_TIME, java.sql.Date.class);
         map.put(BsonType.DB_POINTER, BsonDbPointer.class);
         map.put(BsonType.DOCUMENT, Document.class);
         map.put(BsonType.DOUBLE, Double.class);
@@ -117,6 +117,7 @@ public class BsonTypeClassMap {
         map.put(BsonType.STRING, String.class);
         map.put(BsonType.SYMBOL, Symbol.class);
         map.put(BsonType.TIMESTAMP, BsonTimestamp.class);
+//        map.put(BsonType.TIMESTAMP, java.sql.Timestamp.class);
         map.put(BsonType.UNDEFINED, BsonUndefined.class);
     }
 
